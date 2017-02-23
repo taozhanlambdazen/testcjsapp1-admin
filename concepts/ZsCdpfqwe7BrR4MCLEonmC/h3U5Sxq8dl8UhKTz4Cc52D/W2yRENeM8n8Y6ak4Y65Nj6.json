@@ -1,0 +1,29 @@
+{
+  "uri" : "local://W2yRENeM8n8Y6ak4Y65Nj6/",
+  "name" : "Configuration",
+  "category" : ".config",
+  "parent" : "local://h3U5Sxq8dl8UhKTz4Cc52D/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_config_configure",
+    "expr" : {
+      "json" : { },
+      "type" : "JSON"
+    }
+  }, {
+    "name" : "config",
+    "expr" : {
+      "concept" : "/common/core/AEgtmCtl72A3B4UwaLsGMC/",
+      "bindings" : {
+        "configure" : "_config_configure"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "config"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

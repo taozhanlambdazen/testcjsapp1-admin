@@ -1,0 +1,77 @@
+{
+  "uri" : "local://wcMNjpJuv5B6rq3cgPH406/",
+  "name" : "App User Management",
+  "category" : ".mgt",
+  "parent" : "local://EapkzwWQ4qBAka2OlulDl1/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_appUserMgt_userIdxType",
+    "expr" : {
+      "str" : "local://WcPrB-NL5N8xQKyZfhsPGB/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserMgt_appOwner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "_appUserMgt_appUserConcUri",
+    "expr" : {
+      "str" : "local://O8v-eSQTLu9vXqS2nXEVS9/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserMgt_appUserDashboardUri",
+    "expr" : {
+      "str" : "local://yFHaEp3Gc7BHaq_qpT__c9/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserMgt_appUserSettingsUri",
+    "expr" : {
+      "str" : "local://AVVgSKESlUBOhK7JuJLXz1/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserMgt_formConfigure",
+    "expr" : {
+      "json" : {
+        "displayName" : {
+          "enable" : true,
+          "required" : true
+        }
+      },
+      "type" : "JSON"
+    }
+  }, {
+    "name" : "_appUserMgt_headerHtml",
+    "expr" : {
+      "str" : "",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "appUserMgt",
+    "expr" : {
+      "concept" : "/common/admin/4CD3ejqnMk8kaa-6Kg5jQ2/",
+      "bindings" : {
+        "userIdxType" : "_appUserMgt_userIdxType",
+        "appOwner" : "_appUserMgt_appOwner",
+        "appUserConcUri" : "_appUserMgt_appUserConcUri",
+        "appUserDashboardUri" : "_appUserMgt_appUserDashboardUri",
+        "appUserSettingsUri" : "_appUserMgt_appUserSettingsUri",
+        "formConfigure" : "_appUserMgt_formConfigure",
+        "headerHtml" : "_appUserMgt_headerHtml"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "appUserMgt"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

@@ -1,0 +1,38 @@
+{
+  "uri" : "local://ObebTYamkMBQq4_mCBbQRC/",
+  "name" : "Lambdas (Folder)",
+  "category" : "",
+  "parent" : "local://ZsCdpfqwe7BrR4MCLEonmC/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "folderName",
+    "expr" : {
+      "str" : "Lambdas",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_folder_description",
+    "expr" : {
+      "str" : "Double-click here, or click the Edit button on the top-left, to edit the description",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "folder",
+    "expr" : {
+      "concept" : "/common/core/wsKVkUn9bNAX_qlv_2Nvm6/",
+      "bindings" : {
+        "name" : "folderName",
+        "description" : "_folder_description"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "folder"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

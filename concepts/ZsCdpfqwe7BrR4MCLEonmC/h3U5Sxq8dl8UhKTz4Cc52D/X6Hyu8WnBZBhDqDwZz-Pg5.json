@@ -1,0 +1,36 @@
+{
+  "uri" : "local://X6Hyu8WnBZBhDqDwZz-Pg5/",
+  "name" : "Routing Table",
+  "category" : ".route",
+  "parent" : "local://h3U5Sxq8dl8UhKTz4Cc52D/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_routes_routes",
+    "expr" : {
+      "json" : {
+        "signup" : "/viewlocal://e-J_0h9QLv8dYardbhZN9B/",
+        "logout" : "/viewlocal://e-J_0h9QLv8dYardbhZN9B/",
+        "notauthorized" : "/viewlocal://e-J_0h9QLv8dYardbhZN9B/",
+        "login" : "/viewlocal://e-J_0h9QLv8dYardbhZN9B/",
+        "usermgt" : "/viewlocal://wcMNjpJuv5B6rq3cgPH406/",
+        "dashboard" : "/viewlocal://UqvE9fSE__830qocRbdlF7/"
+      },
+      "type" : "JSON"
+    }
+  }, {
+    "name" : "routes",
+    "expr" : {
+      "concept" : "/common/core/gc0QIG4qmQBJH4yKP0c8e9/",
+      "bindings" : {
+        "routes" : "_routes_routes"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "routes"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

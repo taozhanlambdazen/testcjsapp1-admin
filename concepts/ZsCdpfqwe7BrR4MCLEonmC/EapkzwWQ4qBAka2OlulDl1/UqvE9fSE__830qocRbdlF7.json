@@ -1,0 +1,47 @@
+{
+  "uri" : "local://UqvE9fSE__830qocRbdlF7/",
+  "name" : "App Dashboard",
+  "category" : ".dashboard",
+  "parent" : "local://EapkzwWQ4qBAka2OlulDl1/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "template",
+    "expr" : {
+      "str" : "<html>\n    <head>\n    </head>\n    <body>\n        <div class=\"container\">\n            <h2>App Dashboard</h2>\n            \n            <h4> This is the welcome/dashboard for guest users of the application</h4>\n            \n        </div>\n    </body>\n</html>",
+      "strEditMode" : "html",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/iduwOQ2KZv8MWqamwqb6AE/",
+      "bindings" : {
+        "html" : "template"
+      },
+      "type" : "CONCEPT"
+    }
+  }, {
+    "name" : "_appDashboard_appOwner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "appDashboard",
+    "expr" : {
+      "concept" : "/common/admin/TXbyTY3R_ABmMangjC77f9/",
+      "bindings" : {
+        "appOwner" : "_appDashboard_appOwner"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  }, {
+    "var" : "appDashboard"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

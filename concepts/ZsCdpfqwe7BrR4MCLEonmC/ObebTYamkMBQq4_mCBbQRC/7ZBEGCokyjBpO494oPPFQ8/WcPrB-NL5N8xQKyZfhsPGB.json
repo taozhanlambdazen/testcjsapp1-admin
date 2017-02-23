@@ -1,0 +1,38 @@
+{
+  "uri" : "local://WcPrB-NL5N8xQKyZfhsPGB/",
+  "name" : "App User Index Type",
+  "category" : ".idx",
+  "parent" : "local://7ZBEGCokyjBpO494oPPFQ8/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_type_indexUri",
+    "expr" : {
+      "str" : "local://7ZBEGCokyjBpO494oPPFQ8/",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_type_fieldTypes",
+    "expr" : {
+      "str" : "{ \"username\" : {\"type\": \"string\"},\n  \"email\" : { \"type\" : \"string\"},\n  \"role\" : {\"type\": \"string\"},\n  \"appowner\": {\"type\": \"string\"},\n  \"dashboardUri\" : { \"type\" : \"string\"} }",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "type",
+    "expr" : {
+      "concept" : "/common/core/2ZCZ-kBJFDAkW4sQSVsBs8/",
+      "bindings" : {
+        "indexUri" : "_type_indexUri",
+        "fieldTypes" : "_type_fieldTypes"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "type"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

@@ -1,0 +1,53 @@
+{
+  "uri" : "local://aUhkrMq_509L84C22qPG8C/",
+  "name" : "Welcome Template",
+  "category" : "",
+  "parent" : "local://ODRkMB96oV9kJKZBTppYz9/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "emailContent",
+    "expr" : {
+      "str" : "<html>\n  <body>\n    <p>This is a sample welcome email</p>\n    <p>Dear {{username}}\n    <p>Thank you for joining XXX! Your account name is <b>{{username}}</b>.\n    <p>\n    <p>Please verify your email by clicking the following link: <a href=\"{{cjsDASBaseUrl}}/users/email?email={{useremail}}&token={{verifyToken}}&redirectUrl=http:%2F%2Feval.conceptjs.com%2Fview{{userDashboardUri}}\"><b>Verify my email address</b></a>\n    <p>\n    <p>Thanks!\n    <p>\n    <p>Regards,\n    <p>The XXX Team.\n  </body>\n</html>",
+      "strEditMode" : "html",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_template_appOwner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "_template_templateName",
+    "expr" : {
+      "str" : "WELCOME",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_template_subject",
+    "expr" : {
+      "str" : "Welcome!",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "template",
+    "expr" : {
+      "concept" : "/common/core/yspNY8qZj3A3XKLC3w70U6/",
+      "bindings" : {
+        "appOwner" : "_template_appOwner",
+        "templateName" : "_template_templateName",
+        "templateContent" : "emailContent",
+        "subject" : "_template_subject"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "template"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

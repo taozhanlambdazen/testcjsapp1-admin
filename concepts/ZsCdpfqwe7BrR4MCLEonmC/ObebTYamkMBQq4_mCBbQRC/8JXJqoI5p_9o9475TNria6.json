@@ -1,0 +1,54 @@
+{
+  "uri" : "local://8JXJqoI5p_9o9475TNria6/",
+  "name" : "App User Dashboard",
+  "category" : ".dashboard",
+  "parent" : "local://ObebTYamkMBQq4_mCBbQRC/",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "foo",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "default" : {
+      "str" : "",
+      "type" : "STRING"
+    }
+  } ],
+  "vars" : [ {
+    "name" : "template",
+    "expr" : {
+      "str" : "<html>\n    <head>\n        <link rel=\"stylesheet\" href=\"css/select2/select2.css\">\n        <link rel=\"stylesheet\" href=\"css/select2/select2-bootstrap.css\">\n        \n        <script src=\"js/select2.min.js.gz\"></script>\n    </head>\n    <body>\n        <div class=\"container\">\n            <h2>App User Dashboard</h2>\n            <h4>This is a sample app user dashboard for <span data-bind=\"text: cvsUserVM().displayName\"></span></h4>\n        </div>\n        \n        <script>\n            $(function(){\n                function UserDashboardVM(){\n                    var self = this;\n                    \n                    this.cvsUserVM = ko.observable();\n                }\n                \n                var userDashboardVM = new UserDashboardVM();\n                $cjs.initUser(function(userVM){\n                    userDashboardVM.cvsUserVM(userVM);\n                    ko.applyBindings(userDashboardVM);\n                });\n            })\n        </script>\n    </body>\n</html>",
+      "strEditMode" : "html",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/iduwOQ2KZv8MWqamwqb6AE/",
+      "bindings" : {
+        "html" : "template"
+      },
+      "type" : "CONCEPT"
+    }
+  }, {
+    "name" : "_appUserDashboard_appOwner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "appUserDashboard",
+    "expr" : {
+      "concept" : "/common/admin/TeaCgyZhqpBx9qNezyMjp0/",
+      "bindings" : {
+        "appOwner" : "_appUserDashboard_appOwner"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  }, {
+    "var" : "appUserDashboard"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : true
+}

@@ -1,0 +1,12 @@
+{
+  "uri" : "local://AVVgSKESlUBOhK7JuJLXz1/",
+  "name" : "App User Settings Template",
+  "category" : ".settings",
+  "parent" : "local://9b7BTxqr1b9nBaOXiYpWv3/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ ],
+  "isas" : [ ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

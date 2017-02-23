@@ -1,0 +1,70 @@
+{
+  "uri" : "local://e-J_0h9QLv8dYardbhZN9B/",
+  "name" : "App User Authentication",
+  "category" : ".auth",
+  "parent" : "local://EapkzwWQ4qBAka2OlulDl1/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_appUserAuth_appOwner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "_appUserAuth_appUserConcUri",
+    "expr" : {
+      "str" : "local://O8v-eSQTLu9vXqS2nXEVS9/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserAuth_appUserDashboardUri",
+    "expr" : {
+      "str" : "local://yFHaEp3Gc7BHaq_qpT__c9/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserAuth_appUserSettingsUri",
+    "expr" : {
+      "str" : "local://AVVgSKESlUBOhK7JuJLXz1/",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserAuth_backstretchUrl",
+    "expr" : {
+      "str" : "",
+      "strEditMode" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "_appUserAuth_formConfigure",
+    "expr" : {
+      "json" : {
+        "displayName" : {
+          "enable" : true,
+          "required" : true
+        }
+      },
+      "type" : "JSON"
+    }
+  }, {
+    "name" : "appUserAuth",
+    "expr" : {
+      "concept" : "/common/admin/PyEqxc3P7y907aZQZQs0aC/",
+      "bindings" : {
+        "appOwner" : "_appUserAuth_appOwner",
+        "appUserConcUri" : "_appUserAuth_appUserConcUri",
+        "appUserDashboardUri" : "_appUserAuth_appUserDashboardUri",
+        "appUserSettingsUri" : "_appUserAuth_appUserSettingsUri",
+        "backstretchUrl" : "_appUserAuth_backstretchUrl",
+        "formConfigure" : "_appUserAuth_formConfigure"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "appUserAuth"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : false
+}

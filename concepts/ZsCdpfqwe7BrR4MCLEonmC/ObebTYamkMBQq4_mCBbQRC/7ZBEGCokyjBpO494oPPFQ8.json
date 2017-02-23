@@ -1,0 +1,69 @@
+{
+  "uri" : "local://7ZBEGCokyjBpO494oPPFQ8/",
+  "name" : "App User",
+  "category" : ".user",
+  "parent" : "local://ObebTYamkMBQq4_mCBbQRC/",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "username",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/"
+  }, {
+    "name" : "email",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/"
+  }, {
+    "name" : "role",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "default" : {
+      "str" : "",
+      "type" : "STRING"
+    }
+  }, {
+    "name" : "dashboardUri",
+    "type" : "/common/types/t6plZKh35i93o453wH2NX2/",
+    "default" : {
+      "str" : "",
+      "type" : "STRING"
+    }
+  } ],
+  "vars" : [ {
+    "name" : "appowner",
+    "expr" : {
+      "script" : "var anchorUser = $cjs.getUserFromUri(home.anchor().uri());\nreturn (anchorUser.indexOf(\"_\") > 0)?anchorUser.split(\"_\")[0]:anchorUser;",
+      "type" : "SCRIPT"
+    }
+  }, {
+    "name" : "appUser",
+    "expr" : {
+      "concept" : "/common/admin/X5a17ipB1PAKiqWWDMJqWD/",
+      "bindings" : {
+        "username" : "username",
+        "email" : "email",
+        "appowner" : "appowner",
+        "role" : "role"
+      },
+      "type" : "CONCEPT"
+    }
+  }, {
+    "name" : "_index_type",
+    "expr" : {
+      "concept" : "local://WcPrB-NL5N8xQKyZfhsPGB/",
+      "type" : "CONCEPT"
+    }
+  }, {
+    "name" : "index",
+    "expr" : {
+      "concept" : "/common/core/0mSE4ISzLM8fkKj3BVBy7A/",
+      "bindings" : {
+        "type" : "_index_type"
+      },
+      "type" : "CONCEPT"
+    }
+  } ],
+  "isas" : [ {
+    "var" : "appUser"
+  }, {
+    "var" : "index"
+  } ],
+  "encodedidxhash" : "",
+  "isLambda" : true
+}
